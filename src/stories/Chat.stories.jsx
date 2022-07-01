@@ -1,36 +1,37 @@
 import React from 'react';
 
-import { Button } from './Button';
+import { Chat } from '../Components/servicebox/Chat';
 
-
-// const buttonpath = './button.css';
-// const button_css = String( readFileSync(buttonpath) );
-// button_css = '';
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Service/Box/Chat',
+  component: Chat,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
+    layouts : { control: 'text' },
   },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Chat {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: 'ChitChat',
+  message: ' You have a new message!',
+
 };
 
 
 Primary.parameters = {
   docs: {
     source: {
-      //  code: `css` ,
+      code: `
+      css  here
+      
+      ` ,
       language: "css",
       type: "dynamic",
     },
@@ -40,17 +41,21 @@ Primary.parameters = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  label: 'CHitChat 2',
+  message: 'You have two messages!',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  label: 'Large Heading',
+    message: 'You have two messages!',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: 'notice',
+  
+  message: 'You have two messages!',
 };

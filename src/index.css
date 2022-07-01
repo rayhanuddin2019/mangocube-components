@@ -1,11 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('http://fonts.cdnfonts.com/css/cartoon-free');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Style+Script&display=swap');
+
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+    
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+  body{
+    @apply font-body;
+  }
+}
+
+@layer utilities {
+  .bg-brand-gradient { 
+    @apply bg-gradient-to-r from-indigo-500;
+   }
+
+   .hover\:bg-brand-gradient:hover {
+    @apply bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500;
+    }
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("webfonts/JetBrainsMono-Bold.woff2");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

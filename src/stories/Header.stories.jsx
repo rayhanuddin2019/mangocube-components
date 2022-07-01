@@ -20,5 +20,15 @@ LoggedIn.args = {
   },
 };
 
+LoggedIn.parameters = {
+  docs: {
+    source: {
+     code: `css` ,
+      language: "yml",
+      type: "auto",
+    },
+  },
+};
+
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};

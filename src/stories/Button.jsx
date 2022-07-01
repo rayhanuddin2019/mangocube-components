@@ -8,6 +8,7 @@ import './button.css';
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
+    
     <button
       type="button"
       className={['storybook-button' ,'bg-gray-900 border-solid border-2 border-indigo-600', `storybook-button--${size}`, mode].join(' ')}
